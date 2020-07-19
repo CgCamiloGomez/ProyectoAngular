@@ -3,21 +3,27 @@
 
 <div class="card mb-3" style="max-width: 100%;">
     <div class="row no-gutters">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <img [src]="heroe.img" class="card-img" alt="...">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="card-body">
+                <p> <span style="font-weight: bold;">BIOGRAFIA: </span> {{heroe.nombre}}</p>
+                <hr>
                 <p class="card-text" style="text-align: justify;">{{heroe.bio}}</p>
                 <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+            </div>
+            <div style="text-align: center;">
+                <img *ngIf="mostrar" src="assets/img/DcComics.png" class="card-img" alt="..." style="width: 250px;">
+                <img *ngIf="!mostrar" src="assets/img/LogoMarvel.png" class="card-img" alt="..." style="width: 250px;">
             </div>
             <div style="width: 100%; text-align: center; padding-top: 30px; padding-bottom: 30px;">
                 <button class="btn btn-outline-primary" (click)="regresar()"> Regresar a Heroes</button>
             </div>
         </div>
-        <div class="col-md-4" style="padding-top: 20PX;">
+        <!-- <div class="col-md-4" style="padding-top: 20PX;">
             <img *ngIf="mostrar" src="assets/img/DcComics.png" class="card-img" alt="...">
-            <img *ngIf="!mostrar" src="assets/img/marveldos.jpg" class="card-img" alt="...">
-        </div>
+            <img *ngIf="!mostrar" src="assets/img/LogoMarvel.png" class="card-img img-marvel" alt="...">
+        </div> -->
     </div>
 </div>

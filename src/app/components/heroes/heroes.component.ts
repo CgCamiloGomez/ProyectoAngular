@@ -13,7 +13,7 @@ export class HeroesComponent implements OnInit {
   heroes:Heroe[];
 
   constructor(private _heroesService: HeroesService,
-              private _router:  
+              private _router: Router 
     ) { }
 
   ngOnInit(): void {

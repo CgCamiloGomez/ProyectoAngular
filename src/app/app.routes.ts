@@ -3,6 +3,7 @@ import {HomeComponent} from './components/home/home.component'
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent} from './components/heroes/heroes.component';
 import {HeroeComponent} from './components/heroe/heroe.component';
+import {HeroeEncontradoComponent} from './components/heroe-encontrado/heroe-encontrado.component';
 
 //Se crea una constante la cual contiene una arreglo de objetos 
 const APP_ROUTES: Routes = [
@@ -10,6 +11,7 @@ const APP_ROUTES: Routes = [
     {path:'about', component: AboutComponent },
     {path:'heroes', component: HeroesComponent },
     {path:'heroe/:id/:casa', component:HeroeComponent},// De esta manera indico que la url debe ir con un parametro
+    {path: 'resultadoheroe/:nombre', component:HeroeEncontradoComponent},
     {path:'**', pathMatch: 'full', redirectTo: 'home'},
 ]
 

@@ -21,9 +21,9 @@ export class HeroesComponent implements OnInit {
     console.log (this.heroes);
   }
 
-  getHeroe(index,casa){
+  getHeroe(id,casa){
     //En esta linea le indico a la ruta que hay que ir cuando le de click en el boton
-    this._router.navigate(['/heroe',index,casa]);
+    this._router.navigate(['/heroe',id,casa]);
   }
 
 }

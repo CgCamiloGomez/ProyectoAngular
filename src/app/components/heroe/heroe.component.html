@@ -8,10 +8,11 @@
         </div>
         <div class="col-md-6">
             <div class="card-body">
-                <p> <span style="font-weight: bold;">BIOGRAFIA: </span> {{heroe.nombre}}</p>
+                <!-- {{heroe.nombre | uppercase }} esto es un pipe -->
+                <p> <span style="font-weight: bold;">BIOGRAFIA: </span> {{heroe.nombre | uppercase }} - <small class="text-muted">{{heroe.aparicion | date:'y'}}</small> </p>
                 <hr>
                 <p class="card-text" style="text-align: justify;">{{heroe.bio}}</p>
-                <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+                <!-- <p class="card-text"><small class="text-muted">{{heroe.aparicion | date:'y'}}</small></p> -->
             </div>
             <div style="text-align: center;">
                 <img *ngIf="mostrar" src="assets/img/DcComics.png" class="card-img" alt="..." style="width: 250px;">

@@ -1,9 +1,16 @@
-<h1>Heroes <small> Marvel y DC Comics</small></h1>
+<h1>Buscando: <small> {{termino}}</small></h1>
 <hr>
 
+<div class="row animated fadeIn fast" *ngIf="heroeEncontrado.length == 0">
+    <div class="col-md-12">
+         <div class="alert alert-info" role="alert">
+            No existen resultados con el termino: {{termino}}
+         </div>
+    </div>
+</div>
 <div class="card-columns">
     <!-- Linea para utilizar el index del ngFor  "let i of index" -->
-    <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
+    <div class="card animated fadeIn fast" *ngFor="let heroe of heroeEncontrado; let i = index">
         <img src="{{heroe.img}}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{heroe.nombre}}</h5>

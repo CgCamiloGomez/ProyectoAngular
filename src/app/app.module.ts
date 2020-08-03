@@ -10,6 +10,8 @@ import {APP_ROUTING} from './app.routes'
 import { HeroesService } from './servicios/heroes.service';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { HeroeEncontradoComponent } from './components/heroe-encontrado/heroe-encontrado.component';
+import {HeroeTargetaComponent} from './components/heroe-targeta/heroe-targeta.component'
+
 
 
 @NgModule({
@@ -21,6 +23,7 @@ import { HeroeEncontradoComponent } from './components/heroe-encontrado/heroe-en
     HeroesComponent,
     HeroeComponent,
     HeroeEncontradoComponent,
+    HeroeTargetaComponent
   ],
   imports: [
     BrowserModule,

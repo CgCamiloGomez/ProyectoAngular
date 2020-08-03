@@ -2,23 +2,5 @@
 <hr>
 
 <div class="card-columns">
-    <!-- Linea para utilizar el index del ngFor  "let i of index" -->
-    <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
-        <img src="{{heroe.img}}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{heroe.nombre}}</h5>
-            <p class="card-text">{{heroe.bio}}</p>
-            <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
-
-            <button (click)="getHeroe(heroe.id,heroe.casa)" class=" btn btn-outline-primary btn-block">
-                Ver mas...
-            </button>
-
-
-            <!-- Esta es la manera de pasar a la otra pantalla por el html  -->
-            <!-- Se debe pasar la url a la que voy a redireccionar con el parametro que le voy a enviar -->
-            <!-- [routerLink] recibe un arreglo, el cual se compoenen la url  -->
-            <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver mas..</a> -->
-        </div>
-    </div>
+    <app-heroe-targeta (heroeSelecionado)="getHeroe($event)" [heroe]="heroe" *ngFor="let heroe of heroes"></app-heroe-targeta>
 </div>

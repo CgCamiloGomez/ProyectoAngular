@@ -1,0 +1,18 @@
+
+<div class="card animated fadeIn fast">
+    
+    <img src="{{heroe.img}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{heroe.nombre}}</h5>
+        <p class="card-text">{{heroe.bio}}</p>
+        <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+
+        <button (click)="getHeroe(heroe)" class=" btn btn-outline-primary btn-block">
+            Ver mas...
+        </button>
+        <!-- Esta es la manera de pasar a la otra pantalla por el html  -->
+        <!-- Se debe pasar la url a la que voy a redireccionar con el parametro que le voy a enviar -->
+        <!-- [routerLink] recibe un arreglo, el cual se compoenen la url  -->
+        <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver mas..</a> -->
+    </div>
+</div>

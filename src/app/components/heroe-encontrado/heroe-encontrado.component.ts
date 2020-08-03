@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroeEncontradoComponent implements OnInit {
 
-  heroeEncontrado: Heroe[];
+  heroesEncontrados: Heroe[];
   termino : string;
 
   constructor(public activatedRoute : ActivatedRoute,
@@ -21,13 +21,13 @@ export class HeroeEncontradoComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(parametro =>{
        this.termino = parametro['nombre'];
-      this.heroeEncontrado = this.heroesService.buscarHeroe(parametro['nombre']);
-      console.log (this.heroeEncontrado);
+      this.heroesEncontrados = this.heroesService.buscarHeroe(parametro['nombre']);
+      console.log (this.heroesEncontrados);
     })
   }
 
-  getHeroe(id,casa){
-    this.router.navigate(['/heroe',id,casa]);
+  getHeroe(herore){
+    this.router.navigate(['/heroe',herore.id,herore.casa]);
   }
 
 }
